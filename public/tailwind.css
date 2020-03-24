@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+
+.nav-list {
+  @apply m-3 text-gray-400 uppercase	leading-tight tracking-wide text-lg  font-mono font-semibold ;
+}
+
+@tailwind utilities;
+
+
