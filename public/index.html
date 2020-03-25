@@ -9,10 +9,8 @@
 		<title>My Portfolio</title>
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet"
-		/>
+		<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
 		<link rel="stylesheet" href="/build/tailwind.css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	</head>
@@ -25,20 +23,11 @@
 					>
 						<img src="me.png" class=" w-48  h-full rounded-full" />
 					</div>
-					<div class="h-14 flex justify-end lg:hidden">
-						<button @click="isOpen= !isOpen">
-							<i
-								v-if="!isOpen"
-								class="material-icons text-white"
-								style="font-size: 48px; "
-								>menu</i
-							>
-							<i
-								v-if="isOpen"
-								class="material-icons text-white"
-								style="font-size: 48px;"
-								>close</i
-							>
+					<div class="flex justify-end lg:hidden">
+						<button @click="toggle">
+							<ion-icon 	v-if="!isOpen" name="menu-sharp" class="text-white text-5xl" 	></ion-icon>
+							<ion-icon  v-if="isOpen" name="close-sharp" class="text-white text-5xl"  ></ion-icon>
+							
 						</button>
 					</div>
 
@@ -48,22 +37,22 @@
 					>
 						<ul class="flex flex-col  ease-in-out  lg:items-center">
 							<li class="nav-list hover:text-white">
-								<a href="#about" @click="isOpen= !isOpen">About</a>
+								<a href="#about" @click="toggle">About</a>
 							</li>
 							<li class="nav-list hover:text-white">
 								<a href="#">Portfolio</a>
 							</li>
 							<li class="nav-list hover:text-white">
-								<a href="#experience" @click="isOpen= !isOpen">Experience</a>
+								<a href="#experience" @click="toggle">Experience</a>
 							</li>
 							<li class="nav-list hover:text-white">
-								<a href="#education" @click="isOpen= !isOpen">Education</a>
+								<a href="#education" @click="toggle">Education</a>
 							</li>
 							<li class="nav-list hover:text-white">
-								<a href="#skills" @click="isOpen= !isOpen">Skills</a>
+								<a href="#skills" @click="toggle">Skills</a>
 							</li>
 							<li class="nav-list hover:text-white">
-								<a href="#drop-me-line" @click="isOpen= !isOpen"
+								<a href="#drop-me-line" @click="toggle"
 									>Drop Me Line</a
 								>
 							</li>
@@ -76,12 +65,20 @@
 							<h1 class="text-6xl uppercase font-bold ">
 								Ray <span class="text-orange-600">Kudjie</span>
 							</h1>
-							<div class="uppercase leading-loose ">
-								<p>FullStack Developer</p>
+							<div class=" leading-loose ">
+								<p class="uppercase">FullStack Developer</p>
 								<p>+233260946301</p>
-								<p class="text-orange-600">rkudjie@gmail.com</p>
 								<p class="text-orange-600">
-									<a href="https://github.com/kudjieRaymond">GitHub</a>
+									<ion-icon name="mail" class="text-xl"></ion-icon>
+									<span>rkudjie@gmail.com</span></p>
+								<p class="text-orange-600">
+									<a href="https://github.com/kudjieRaymond" target="_blank" class="">
+										
+										<ion-icon name="logo-github" class="text-xl"></ion-icon> <span class="hover:text-orange-900"> https://github.com/kudjieRaymond</span></a>
+								</p>
+								<p class="text-orange-600">
+									<a href="https://www.linkedin.com/in/ray-kudjie-4b1424150/" target="_blank"><ion-icon name="logo-linkedin" class="text-xl"></ion-icon> <span class="hover:text-orange-900"> https://www.linkedin.com/in/ray-kudjie-4b1424150/</span></a>
+									
 								</p>
 							</div>
 							<div class="leading-loose mt-12 font-sans text-lg">
@@ -351,7 +348,13 @@
 				el: "#app",
 				data: {
 					isOpen: false
+				},
+				methods:{
+					toggle: function(){
+						this.isOpen = !this.isOpen;
+					}
 				}
+				
 			});
 		</script>
 	</body>
