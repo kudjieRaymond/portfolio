@@ -7,11 +7,10 @@
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
 		<title>My Portfolio</title>
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-		<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 
-		<link rel="stylesheet" href="/build/tailwind.css" />
+		<link rel="stylesheet" href="build/tailwind.css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	</head>
 	<body class="antialiased">
@@ -25,9 +24,16 @@
 					</div>
 					<div class="flex justify-end lg:hidden">
 						<button @click="toggle">
-							<ion-icon 	v-if="!isOpen" name="menu-sharp" class="text-white text-5xl" 	></ion-icon>
-							<ion-icon  v-if="isOpen" name="close-sharp" class="text-white text-5xl"  ></ion-icon>
-							
+							<ion-icon
+								v-if="!isOpen"
+								name="menu-sharp"
+								class="text-white text-5xl"
+							></ion-icon>
+							<ion-icon
+								v-if="isOpen"
+								name="close-sharp"
+								class="text-white text-5xl"
+							></ion-icon>
 						</button>
 					</div>
 
@@ -52,9 +58,7 @@
 								<a href="#skills" @click="toggle">Skills</a>
 							</li>
 							<li class="nav-list hover:text-white">
-								<a href="#drop-me-line" @click="toggle"
-									>Drop Me Line</a
-								>
+								<a href="#drop-me-line" @click="toggle">Drop Me Line</a>
 							</li>
 						</ul>
 					</div>
@@ -70,29 +74,43 @@
 								<p>+233260946301</p>
 								<p class="text-orange-600">
 									<ion-icon name="mail" class="text-xl"></ion-icon>
-									<span>rkudjie@gmail.com</span></p>
-								<p class="text-orange-600">
-									<a href="https://github.com/kudjieRaymond" target="_blank" class="">
-										
-										<ion-icon name="logo-github" class="text-xl"></ion-icon> <span class="hover:text-orange-900"> https://github.com/kudjieRaymond</span></a>
+									<span>rkudjie@gmail.com</span>
 								</p>
 								<p class="text-orange-600">
-									<a href="https://www.linkedin.com/in/ray-kudjie-4b1424150/" target="_blank"><ion-icon name="logo-linkedin" class="text-xl"></ion-icon> <span class="hover:text-orange-900"> https://www.linkedin.com/in/ray-kudjie-4b1424150/</span></a>
-									
+									<a
+										href="https://github.com/kudjieRaymond"
+										target="_blank"
+										class=""
+									>
+										<ion-icon name="logo-github" class="text-xl"></ion-icon>
+										<span class="hover:text-orange-900">
+											https://github.com/kudjieRaymond</span
+										></a
+									>
+								</p>
+								<p class="text-orange-600">
+									<a
+										href="https://www.linkedin.com/in/ray-kudjie-4b1424150/"
+										target="_blank"
+										><ion-icon name="logo-linkedin" class="text-xl"></ion-icon>
+										<span class="hover:text-orange-900">
+											https://www.linkedin.com/in/ray-kudjie-4b1424150/</span
+										></a
+									>
 								</p>
 							</div>
 							<div class="leading-loose mt-12 font-sans text-lg">
 								<p>
 									I am a full-stack software engineer with a focus on the
 									backend. I built highly secured and performant systems using
-									latest industry trends
+									latest industry trends.
 								</p>
-								<p class="mt-4">
-									I am very enthusiastic about my work therefore I alwways
+								<p class="mt-2">
+									I am very enthusiastic about my work therefore I always
 									ensure I deliver excellent software systems.
 									<br />
 									When I'm not building web apps I read on Computer vision
-									because that's one of my areas of interest
+									because that's one of my areas of interest.
 								</p>
 							</div>
 						</section>
@@ -349,13 +367,13 @@
 				data: {
 					isOpen: false
 				},
-				methods:{
-					toggle: function(){
+				methods: {
+					toggle: function() {
 						this.isOpen = !this.isOpen;
 					}
 				}
-				
 			});
 		</script>
+		<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
 	</body>
 </html>
